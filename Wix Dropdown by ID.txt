@@ -1,14 +1,6 @@
 //Select Proposal
 $w('#selectProposal').onChange((event) => { 
 
-        //show the loading bar
-        $w("#input10").hide();
-        $w("#input11").hide();
-        $w("#input12").hide();    
-        $w("#input13").hide();   
-        $w("#input14").hide();
-        $w("#bar").show();
-
         //get the id of the proposal
         let identifier = $w("#selectProposal").value;
 
@@ -41,18 +33,6 @@ $w('#selectProposal').onChange((event) => {
                 $w("#input12").value = editAuthor;
                 $w("#input13").value = editIntro;
                 $w("#input14").value = editOffer;
-
-                setTimeout(() => 
-                {
-                // Code to execute after the delay
-                    $w("#input10").show();
-                    $w("#input11").show();
-                    $w("#input12").show();    
-                    $w("#input13").show();   
-                    $w("#input14").show();
-                    $w("#bar").hide(); 
-                }, 1000); 
- 
 
             } else {
                 console.log("No matching item found for identifier:", identifier);
